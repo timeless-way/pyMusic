@@ -8,12 +8,13 @@ class Musicule:
 	
 class Note(Musicule):
 	
-	def __init__(self, pitch=59, volume=90, duration=1, legato=1.0, channel=None):
+	def __init__(self, channel=0, pitch=59, volume=90, duration=1, legato=1.0):
 		super().__init__(duration)
 		self.pitch = pitch
 		self.volume = volume
 		self.legato = legato
 		self.channel = channel
+		print(channel,pitch,volume,duration,legato)
 	
 	def set_channel(self, channel):
 		self.channel = channel
@@ -159,9 +160,12 @@ class Midi_tape:
 			pass
 		player.stop()
 
-def perform(musicule, tape=None):
+def perform(musicule, tape=None, instruments=None):
 	if not tape:
 		tape = Midi_tape('temp')
+	if instruments:
+		for i in range(len(instruments)):
+			tape.change_instrument(channel=i, instrument=instruments[i])
 	musicule.play(tape)
 	tape.play()
 	return tape
