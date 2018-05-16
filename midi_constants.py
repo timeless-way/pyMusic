@@ -9,7 +9,8 @@ key_nr = 23
 c = octaves(key_nr)
 c_sharp = d_flat = octaves(key_nr+1)
 d = octaves(key_nr+2)
-d_sharp = e_flat = octaves(key_nr+3)e = octaves(key_nr+4)
+d_sharp = e_flat = octaves(key_nr+3)
+e = octaves(key_nr+4)
 f = octaves(key_nr+5)
 f_sharp = g_flat = octaves(key_nr+6)
 g = octaves(key_nr+7)
@@ -72,7 +73,7 @@ String_Ensemble_1 = 48
 String_Ensemble_2 = 49
 SynthStrings_1 = 50
 SynthStrings_2 = 51
-Choir Aahs = 52
+Choir_Aahs = 52
 Voice_Oohs = 53
 Synth_Voice = 54
 Orchestra_Hit = 55
@@ -123,7 +124,7 @@ FX_4_atmosphere = 99
 FX_5_brightness = 100
 FX_6_goblins = 101
 FX_7_echoes = 102
-FX_8_sci-fi = 103
+FX_8_sci_fi = 103
 Sitar = 104
 Banjo = 105
 Shamisen = 106
